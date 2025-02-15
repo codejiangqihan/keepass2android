@@ -325,7 +325,7 @@ jobs:
       with:
         name: signed APK ('net' built on ${{ github.job }})
         path: |
-          src/keepass2android/bin/*/*-Signed.apk
+          src/keepass2android/**/*.apk
 
     - name: Install NuGet dependencies (nonet)
       run: make nuget Flavor=NoNet
@@ -346,7 +346,7 @@ jobs:
       with:
         name: signed APK ('nonet' built on ${{ github.job }})
         path: |
-          src/keepass2android/bin/*/*-Signed.apk
+          src/keepass2android/**/*.apk
 
     - name: Perform "make distclean"
       run: make distclean
